@@ -30,6 +30,10 @@ class TodoItem extends Model
                   WHERE $todoId = $todoId";
 
         self::$db->query($query);
+
+        $result = self::$db->execute();
+
+        return $result;
         
 
     }

@@ -33,7 +33,7 @@ class TodoController extends Controller {
         // This action should update a specific todo item in the todos table using the TodoItem::updateTodo method.
         // Try and figure out what parameters you need to pass to the updateTodo-method in the TodoItem model.
 
-         $this->redirect('/')
+         $this->redirect('/');
         // if there's a result
         // use the redirect method to send the user back to the list of todos $this->redirect('/');
         // otherwise, throw an exception or show an error message
