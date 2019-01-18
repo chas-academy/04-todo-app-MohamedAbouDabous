@@ -8,13 +8,16 @@ class TodoItem extends Model
 
     public static function createTodo($title)
     {
-        $query = "INSERT INTO todo ($title)"
+
+        $query = "INSERT INTO todos (todoTitle)
+                  VALUES ($title)";
 
 
         self::$db->query($query);
-        $result = self::$statement->execute();
 
-        
+        $result = self::$db->execute();
+
+        return $result;
 
 
     }

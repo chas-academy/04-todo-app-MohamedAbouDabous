@@ -42,13 +42,11 @@ class TodoController extends Controller {
     public function delete($urlParams)
     {
 
-      
       $result = TodoItem::deleteTodo($urlParams['id']);
 
       if ($result){
         $this->redirect('/');
       }
-
 
     }
 
