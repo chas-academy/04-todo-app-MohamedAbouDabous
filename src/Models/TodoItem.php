@@ -24,17 +24,16 @@ class TodoItem extends Model
     {
         $query = "UPDATE todos
 
-                  SET $title = $title
-                      $completed = $completed
+                  SET title = '$title',
+                      completed = '$completed'
 
-                  WHERE $todoId = $todoId";
+                  WHERE id = '$todoId'";
 
         self::$db->query($query);
 
-        $result = self::$db->execute();
+        $result = self::$db->execute($title, $completed, $todoId);
 
         return $result;
-        
 
     }
 
